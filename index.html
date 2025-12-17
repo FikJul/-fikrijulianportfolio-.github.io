@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Desain</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <div class="brand">Fikri Julian Portofolio</div>
+      <nav class="nav">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#portfolio">Portofolio</a>
+        <a href="#contact">Kontak</a>
+        <a class="pill" href="#order">Order</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="dashboard" class="section hero">
+        <div class="hero__content">
+          <p class="eyebrow">Halo, saya desainer visual</p>
+          <h1>Portofolio desain yang fokus pada cerita, data, dan visual yang berani.</h1>
+          <p class="lede">Saya membuat infografis statistik, identitas visual, hingga ilustrasi yang siap dipakai brand. Mari lihat karya terbaru saya.</p>
+          <div class="hero__cta">
+            <a class="btn" href="#portfolio">Lihat portofolio</a>
+            <a class="btn ghost" href="#order">Pesan jasa</a>
+          </div>
+        </div>
+        <div class="hero__panel">
+          <!-- Ganti nilai src di baris ini dengan URL/path foto kamu -->
+          <img class="hero__photo" src="foto_saya/foto_profil.JPG" alt="Foto saya" />
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="latest">
+        <div class="section__header">
+          <div>
+            <p class="eyebrow">Terbaru</p>
+            <h2 id="latest">Pekerjaan terbaru</h2>
+          </div>
+          <a class="link" href="#portfolio">Lihat semua</a>
+        </div>
+        <div class="grid grid--latest" id="latestGrid">
+          <!-- Filled by JS -->
+        </div>
+      </section>
+
+      <section id="portfolio" class="section">
+        <div class="section__header">
+          <div>
+            <p class="eyebrow">Portofolio</p>
+            <h2>Jelajahi kategori</h2>
+          </div>
+          <div class="tabs" role="tablist" aria-label="Kategori portofolio">
+            <button class="tab active" data-filter="all" role="tab">Semua</button>
+            <button class="tab" data-filter="statistic" role="tab">Statistic</button>
+            <button class="tab" data-filter="grafis" role="tab">Desain Grafis</button>
+            <button class="tab" data-filter="logo" role="tab">Desain Logo</button>
+            <button class="tab" data-filter="illustrasi" role="tab">Illustrasi</button>
+          </div>
+        </div>
+        <div class="grid" id="portfolioGrid">
+          <!-- Filled by JS -->
+        </div>
+      </section>
+
+      <section id="contact" class="section section--split">
+        <div>
+          <p class="eyebrow">Kontak</p>
+          <h2>Hubungi saya</h2>
+          <p class="lede">Tertarik bekerja sama? Saya cepat merespons via email dan Instagram.</p>
+          <ul class="contact-list">
+            <!-- Ganti email di href/text berikut -->
+            <li><span>Email</span><a href="mailto:muhammadfikrijlng@gmail.com">muhammadfikrijlng@gmail.com</a></li>
+            <!-- Ganti username Instagram di href/text berikut -->
+            <li><span>Instagram</span><a href="https://instagram.com/fikrijulian__" target="_blank" rel="noopener">@fikrijulian__</a></li>
+            <!-- Ganti dengan profil LinkedIn kamu -->
+            <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/username" target="_blank" rel="noopener">linkedin.com/in/username</a></li>
+          </ul>
+        </div>
+        <div class="contact-card">
+          <p class="label">Highlight</p>
+          <h3>Desain data untuk kampanye publik</h3>
+          <p>Riset, copy, layout, dan aset sosial siap tayang. Cocok untuk organisasi dan brand yang ingin bercerita lewat data.</p>
+          <a class="link" href="#portfolio">Lihat contoh</a>
+        </div>
+      </section>
+
+      <section id="order" class="section order">
+        <div class="order__content">
+          <p class="eyebrow">Order</p>
+          <h2>Pesan jasa desain</h2>
+          <p class="lede">Klik tombol di bawah untuk diarahkan ke DM Instagram saya. Ceritakan kebutuhanmu, saya akan kembali dengan penawaran dalam 24 jam.</p>
+          <a class="btn" href="https://instagram.com/fikrijulian__" target="_blank" rel="noopener">Pesan via Instagram</a>
+        </div>
+        <div class="order__badge">Siap kolaborasi</div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal__overlay" data-modal-close></div>
+    <div class="modal__body" role="document">
+      <button class="modal__close" aria-label="Tutup" data-modal-close>&times;</button>
+      <div class="modal__media" id="modalMedia"></div>
+      <div class="modal__content">
+        <p class="eyebrow" id="modalCategory"></p>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDescription"></p>
+        <div class="pill-row" id="modalTags"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
